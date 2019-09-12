@@ -15,9 +15,51 @@ var categorylist = [
 {'imageUrl':'https://img.alicdn.com/tps/i4/TB1XhUcPhYaK1RjSZFnwu180pXa.png','title':'全部分类'},
 ];
 
+var categoryStar = {
+    'array' : [
+        {
+            'imageUrl':"https://gw.alicdn.com/bao/uploaded/i4/2215302589/O1CN01kBFkxZ1UznyCAaRUM_!!0-item_pic.jpg",
+            'title':'逛同城',
+            'subtitle':'32.7万人在线',
+            'key':''
+        }, {
+            'imageUrl':"https://gw.alicdn.com/bao/uploaded/i1/4120077792/O1CN0127QmbtcWlbOF7pA_!!0-item_pic.jpg",
+            'title':'免费送',
+            'subtitle':'55.9万件宝贝',
+            'key':'Hot'
+        },
+        {
+            'imageUrl':"https://gw.alicdn.com/bao/uploaded/i2/454397463/O1CN01dznPY82506OMO3B6r_!!0-item_pic.jpg",
+            'title':'租房',
+            'subtitle':'真实房东',
+            'key':''
+        },
+        {
+            'imageUrl':"https://img.alicdn.com/bao/uploaded/bao/upload/TB1MpxOfG67gK0jSZFHXXa9jVXa.png_400x400q60.jpg",
+            'title':'闲鱼币',
+            'subtitle':'签到抢红包',
+            'key':'新人礼'
+        }
+
+    ],
+    'star': {
+       'imageUrl':'https://img.alicdn.com/bao/uploaded/bao/upload/TB1MmzKVkvoK1RjSZFNXXcxMVXa.png_400x400q60.jpg', 
+       'title': "明星在闲鱼",
+       'subtitle':'李晨nic: 每周二四鞋友俱乐部'
+    }
+
+};
+
+
+
 app.get('/xianyu/home/getCategroyList',function(request,response){
 
     response.send(categorylist);
+});
+
+app.get('/xianyu/home/getCategroyStar',function(request,response){
+
+    response.send(categoryStar);
 });
 
 app.listen(8082);
